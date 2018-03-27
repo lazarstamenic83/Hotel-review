@@ -1,0 +1,54 @@
+<div class="hotel_holder">
+		
+		<div class="image_holder"></div>
+		
+		<div class="hotel_description">
+		
+			<div class="star_holder">
+				<i class="fa fa-star" id="first"></i>
+				<i class="fa fa-star" id="second"></i>
+				<i class="fa fa-star" id="third"></i>
+				<i class="fa fa-star" id="fourth"></i>
+				<i class="fa fa-star" id="fifth"></i>
+		    </div>
+			<div class="hotel_name">
+				
+			</div>
+			<div class="show_reviews">
+				<p>Show reviews</p>
+	        </div>
+			<div class="price_date">
+				
+			</div>
+	    </div>	
+		
+		<div class="review">
+			<div class="positive_negative_review">
+				<i class="fa fa-plus"></i>
+			</div>
+			
+			<div class="review_holder">
+				<h1>Hermina Lowe</h1>
+				<p>Odio neque aut quia voluptatem aut repudiandae consequuntur exlicabo. Eum dolor nisi quia deleniti
+				ut aliquid eum neque. Tempore voluptatem aut. Repellendus magni dolorem ex ullam ex. Repellat dolor saepe</p>
+			</div>
+		</div>
+		
+		<div class="short_line"></div>
+		
+		<div class="review">
+			<div class="positive_negative_review">
+				<i class="fa fa-minus"></i>
+			</div>
+			
+			<div class="review_holder">
+				<h1>Martina Mraz</h1>
+				<p>Non ex qui molestiae quisquam molestias. Ut quaerat esse. Occaeti labore est deserunt voluptas enim quidem. Pariatur non in vel
+				repellat illum est libero. Reprehenderit et ullam tempore incidunt consectetur et fugit ullam maxime.</p>
+				
+				<p>Quia ea non qui. Doloremque aut accusantium molestiae. Ut et et ut distinctio. Ut ullam et dolorum sunt dolore atque sed. Ut dolores
+				id cumque. Ut officia unde</p>
+			</div>
+		</div>
+		
+	</div>
