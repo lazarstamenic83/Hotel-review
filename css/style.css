@@ -18,39 +18,32 @@ time, mark, audio, video {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 nav ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
 a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 /*css reset*/
 /* stars */
@@ -60,8 +53,7 @@ a {
   float: right;
   margin-right: 20px;
   margin-top: 20px;
-  color: gray;
-}
+  color: gray; }
 
 /* stars */
 /*css reset*/
@@ -83,39 +75,32 @@ time, mark, audio, video {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 nav ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
 a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
-}
+  background: transparent; }
 
 /*css reset*/
 /* stars */
@@ -125,8 +110,7 @@ a {
   float: right;
   margin-right: 20px;
   margin-top: 20px;
-  color: gray;
-}
+  color: gray; }
 
 /* stars */
 /* load hotels button */
@@ -139,15 +123,12 @@ a {
   margin: auto;
   margin-top: 60px;
   margin-bottom: 60px;
-  cursor: pointer;
-}
-
-.load_hotels p {
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-}
+  cursor: pointer; }
+  .load_hotels p {
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px; }
 
 /* load hotels button */
 /* hotel holder */
@@ -160,43 +141,33 @@ a {
   overflow: hidden;
   background-color: #bbbbbb;
   display: none;
-  margin-bottom: 40px;
-}
-
-.hotel_holder .star_holder {
-  height: 20px;
-  width: 100px;
-  float: right;
-  margin-right: 20px;
-  margin-top: 20px;
-  color: gray;
-}
-
-.hotel_holder .image_holder {
-  height: 239px;
-  width: 320px;
-  background-size: cover;
-  float: left;
-}
-
-.hotel_holder .show_border {
-  border-bottom: 1px solid black;
-}
-
-.hotel_holder .hotel_description {
-  width: 479px;
-  height: 239px;
-  background-color: #f6f6f6;
-  display: inline-block;
-  border-left: 1px solid black;
-}
+  margin-bottom: 40px; }
+  .hotel_holder .star_holder {
+    height: 20px;
+    width: 100px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: gray; }
+  .hotel_holder .image_holder {
+    height: 239px;
+    width: 320px;
+    background-size: cover;
+    float: left; }
+  .hotel_holder .show_border {
+    border-bottom: 1px solid black; }
+  .hotel_holder .hotel_description {
+    width: 479px;
+    height: 239px;
+    background-color: #f6f6f6;
+    display: inline-block;
+    border-left: 1px solid black; }
 
 .hotel_name h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
   margin-left: 15px;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .hotel_name p {
   font-family: "Source Sans Pro", sans-serif;
@@ -204,12 +175,9 @@ a {
   margin-right: 15px;
   margin-top: 10px;
   text-align: justify;
-  line-height: 17px;
-}
-
-.hotel_name p:nth-child(2) {
-  float: left;
-}
+  line-height: 17px; }
+  .hotel_name p:nth-child(2) {
+    float: left; }
 
 /* hotel holder */
 /* review button */
@@ -221,15 +189,12 @@ a {
   border: 1px solid black;
   cursor: pointer;
   margin-left: 15px;
-  margin-top: 30px;
-}
-
-.show_reviews p {
-  font-family: "Source Sans Pro", sans-serif;
-  text-align: center;
-  font-size: 20px;
-  line-height: 40px;
-}
+  margin-top: 30px; }
+  .show_reviews p {
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px; }
 
 /* review button */
 /* price/date */
@@ -238,22 +203,17 @@ a {
   height: 60px;
   float: right;
   margin-right: 20px;
-  margin-top: -50px;
-}
-
-.price_date h1 {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 30px;
-  margin-left: 120px;
-}
-
-.price_date p {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  margin-top: 10px;
-  float: right;
-  margin-right: 10px;
-}
+  margin-top: -50px; }
+  .price_date h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    margin-left: 120px; }
+  .price_date p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    float: right;
+    margin-right: 10px; }
 
 /* price/date */
 /* reviews */
@@ -261,47 +221,44 @@ a {
   background-color: #bbbbbb;
   height: auto;
   overflow: hidden;
-  display: none;
-}
+  display: none; }
+  .review h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 110px; }
+  .review p {
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 18px;
+    padding-bottom: 30px;
+    margin-left: 110px;
+    margin-right: 30px; }
 
-.review h1 {
-  font-family: "Source Sans Pro", sans-serif;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 110px;
-}
-
-.review p {
-  font-family: "Source Sans Pro", sans-serif;
-  line-height: 18px;
-  padding-bottom: 30px;
-  margin-left: 110px;
-  margin-right: 30px;
-}
-
-.positive_negative_review {
+.review_score {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   background-color: white;
   float: left;
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 30px;
-  display: none;
-}
-
-.positive_negative_review i {
+  position: relative;
   margin-top: 18px;
   margin-left: 18px;
-}
+  display: block; }
+  .review_score i {
+    margin-top: 18px;
+    margin-left: 18px; }
 
 .short_line {
   height: 1px;
   width: 700px;
   background-color: gray;
   margin: auto;
-  display: none;
-}
+  display: block; }
+  .short_line:last-child {
+    display: none; }
+
+.review_holder {
+  width: 800px;
+  float: right; }
 
 /* reviews */
