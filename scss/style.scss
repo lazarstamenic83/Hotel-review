@@ -56,6 +56,7 @@ $border_black: 1px solid black;
 	background-color: #f6f6f6;
 	display: inline-block;
 	border-left: 1px solid black;
+	
 	}
 }
 .hotel_name{
@@ -64,6 +65,7 @@ $border_black: 1px solid black;
 	font-size: 24px;
 	margin-left: 15px;
 	margin-top: 20px;
+
 	}
 	p{
 	font-family: $source_font;
@@ -105,6 +107,7 @@ $border_black: 1px solid black;
 	float: right;
 	margin-right: 20px;
 	margin-top: -50px;
+
 	h1{
 	font-family: $source_font;
 	font-size: 30px;
@@ -147,7 +150,7 @@ $border_black: 1px solid black;
 	border-radius: 100%;
 	background-color: white;
 	float: left;
-	position: relative;
+	
 	margin-top: 18px;
 	margin-left: 18px;
 	display: block;
@@ -167,8 +170,25 @@ $border_black: 1px solid black;
 	}
 }
 .review_holder{
-
 	width: 800px;
 	float: right;
 }
 /* reviews */
+
+/* error message */
+.error_message{
+	border: $border_black;
+	border-radius: 10px;
+	background-color: #e5e5e5;
+	height: 60px;
+	width: 800px;
+	margin: auto;
+	p{
+		font-family: $source_font;
+		text-align: center;
+		font-size: 24px;
+		color: black;
+		margin-top: 18px;
+	}
+}
+/* error message */

@@ -9,6 +9,7 @@ if(nextR){
             type: 'GET',
             dataTypes: 'json',
             success: function (data) {
+            	console.log(data);
 				$(data).each(function (index, hotel) {
 					    var block_of_code = '<div class="hotel_holder" id="hotel_holder'+index+'"><div class="image_holder" id="image_holder'+
 					    index+'"></div><div class="hotel_description" id="hotel_description'+index+
@@ -30,7 +31,7 @@ if(nextR){
 						$('body').append(block_of_code);
 							
 					
-							$('.image_holder').css('background-image', 'url('+ hotel.images[0] +')');
+							$('#image_holder' +index).css('background-image', 'url('+ hotel.images[0] +')');
                    
 							$('.hotel_holder').stop().fadeIn( "200", "linear" );
 
@@ -62,15 +63,11 @@ if(nextR){
 
 
 
+										var stop_loading = true;
 
 						$('#show_reviews' + index).click(function(p){
+							if(stop_loading){
 									p.preventDefault();
-											
-                          					$('#review' +index).stop().slideToggle( "500", "linear" );
-											$('#positive_negative_review' + index).stop().fadeToggle( "200", "linear" );
-											$('#hotel_description'+index).toggleClass("show_border");
-											$('#image_holder' +index).toggleClass("show_border");
-											
 								        	$.ajax({
             									url: "https://prodynafakeapi.herokuapp.com/api/reviews?hotel_id="+hotel.id,
             									type: 'GET',
@@ -78,48 +75,48 @@ if(nextR){
             									success: function (data1) {
             										console.log(data1);
             										$(data1).each(function (index1, review) {
-            													
-            													$("#review" +index).append('<div class="review_holder" id="review_holder'+index+'"></div>');
-            													$("#review_holder" +index).append("<h1>"+review.name+"</h1><p>"+review.comment+"</p><div class='short_line'></div>");
-  
-       															
+       															//positive negative review
+            													if(review.positive === false){
+            														$("#review" +index).append('<div class="review_holder" id="review_holder'+index+'"></div>');
+            														$("#review_holder" +index).append("<div class='review_score'id='review_holder"+index+"'><i class='fa fa-minus'></i></div>");
+            														$("#review_holder" +index).append("<h1>"+review.name+"</h1><p>"+review.comment+"</p><div class='short_line'></div>");
+            														console.log(index);
+            													}else{
+            														$("#review" +index).append('<div class="review_holder" id="review_holder'+index+'"></div>');
+            														$("#review_holder" +index).append("<div class='review_score'id='review_holder"+index+"'><i class='fa fa-plus'></i></div>");
+            														$("#review_holder" +index).append("<h1>"+review.name+"</h1><p>"+review.comment+"</p><div class='short_line'></div>");
+            													}
+            													//positive negative review
+
             													//short line display none if name count=1
-            													if(review.name === 0){
+            													if(review.name === 1){
             														$('.short_line').css('display', 'none');	
             													}
-            													//short line display none if name count=1
-
-            													//positive negative review
-            													if(review.positive === false){
-            														$("#review_holder" +index).append("<div class='review_score'><i class='fa fa-minus'></i></div>");
-            													}else{
-            														$("#review_holder" +index).append("<div class='review_score'><i class='fa fa-plus'></i></div>");
-            													}
-            													//positive negative review
+            													//short line display none if name count=1			
             											}); 
+            										stop_loading=false;
 										     }
+
 										});
-								        	
+								        	}
+								        	$('#review' +index).stop().slideToggle( "500", "linear" );
+											$('#positive_negative_review' + index).stop().fadeToggle( "200", "linear" );
+											$('#hotel_description'+index).toggleClass("show_border");
+											$('#image_holder' +index).toggleClass("show_border");
+											
 										});	
-
-
-
-
-
-
+								
 
 								});  //index, hotel
 
-            }
-
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+       $('body').append('<div class="error_message"><p>An error occured</p></div>');
+    }       
         });
-
         nextR = false;
 		}    
-
     });    
-
-
 });
 			
 	
