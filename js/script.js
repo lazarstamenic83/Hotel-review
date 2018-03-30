@@ -1,8 +1,15 @@
-	
 $(document).ready(function() {
 var nextR = true;	
+
 		$('.load_hotels ').click(function (e) {
+			
 if(nextR){
+
+		$(document).ajaxStart(function() {
+				$(".loading_spinner").show();
+			});
+	
+
         e.preventDefault();
         $.ajax({
             url: "https://prodynafakeapi.herokuapp.com/api/hotels?count=5",
@@ -18,8 +25,8 @@ if(nextR){
 					    '"></i><i class="fa fa-star" id="third' +index+
 					    '"></i><i class="fa fa-star" id="fourth ' +index+
 					    '"></i><i class="fa fa-star" id="fifth ' +index+'"></i></div><div class="hotel_name"><h1>' + hotel.name +
-					     '</h1><p>' + hotel.city +'</p><p>' + hotel.country + '</p><p>' + hotel.description + 
-					     '</p></div><div class="show_reviews" id="show_reviews'+index+
+					     '</h1><p>' + hotel.city +'</p><p>' + hotel.country + '</p><div class="descript_wrapper"><p>' + hotel.description + 
+					     '</p></div></div><div class="show_reviews" id="show_reviews'+index+
 					     '"><p>Show reviews</p></div><div class="price_date"><h1>' + 
 					     hotel.price + ' &#8364 </h1><p>' + hotel.date_start.substring(0, 10) +
 					      '</p><p> - </p><p>' + hotel.date_end.substring(0, 10) +
@@ -59,11 +66,7 @@ if(nextR){
 											$('#fourth' + index).css('color', 'black');	
 											$('#fifth' + index).css('color', 'black');	
 										}
-
-
-
-
-										var stop_loading = true;
+										var stop_loading = true; //stop loading reviews
 
 						$('#show_reviews' + index).click(function(p){
 							if(stop_loading){
@@ -72,6 +75,7 @@ if(nextR){
             									url: "https://prodynafakeapi.herokuapp.com/api/reviews?hotel_id="+hotel.id,
             									type: 'GET',
            										dataTypes: 'json',
+           										complete: function(){$(".loading_spinner").hide();},
             									success: function (data1) {
             										console.log(data1);
             										$(data1).each(function (index1, review) {
@@ -110,13 +114,19 @@ if(nextR){
 								});  //index, hotel
 
             },
+
             error: function(XMLHttpRequest, textStatus, errorThrown) { 
        $('body').append('<div class="error_message"><p>An error occured</p></div>');
-    }       
+    },
+    complete: function(){$(".loading_spinner").hide();},       
+
         });
         nextR = false;
-		}    
-    });    
+
+		}   
+
+    });  
+
 });
 			
 	

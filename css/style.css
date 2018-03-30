@@ -122,7 +122,7 @@ a {
   border: 1px solid black;
   margin: auto;
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   cursor: pointer; }
   .load_hotels p {
     font-family: "Source Sans Pro", sans-serif;
@@ -162,6 +162,14 @@ a {
     background-color: #f6f6f6;
     display: inline-block;
     border-left: 1px solid black; }
+    .hotel_holder .hotel_description .descript_wrapper {
+      height: 100px;
+      width: 455px;
+      margin-left: 10px;
+      border: 1px solid black;
+      overflow: scroll;
+      overflow-x: hidden;
+      margin-top: 10px; }
 
 .hotel_name h1 {
   font-family: "Source Sans Pro", sans-serif;
@@ -189,7 +197,7 @@ a {
   border: 1px solid black;
   cursor: pointer;
   margin-left: 15px;
-  margin-top: 30px; }
+  margin-top: 8px; }
   .show_reviews p {
     font-family: "Source Sans Pro", sans-serif;
     text-align: center;
@@ -211,7 +219,7 @@ a {
   .price_date p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 5px;
     float: right;
     margin-right: 10px; }
 
@@ -277,3 +285,33 @@ a {
     margin-top: 18px; }
 
 /* error message */
+/*spiner*/
+.spinner_wrapper {
+  width: 70px;
+  height: 70px;
+  margin: auto; }
+  .spinner_wrapper .loading_spinner {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    display: block;
+    background-image: url("img/spinner.gif");
+    background-size: 280%;
+    background-position: center;
+    left: 50%;
+    margin-left: -35px;
+    display: none; }
+
+.review_spinner {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  display: block;
+  background-image: url("img/spinner.gif");
+  background-size: 280%;
+  background-position: center;
+  left: 50%;
+  margin-left: -35px;
+  display: none; }
+
+/*spiner*/
