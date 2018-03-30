@@ -303,15 +303,15 @@ a {
     display: none; }
 
 .review_spinner {
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
   position: absolute;
-  display: block;
+  display: none;
   background-image: url("img/spinner.gif");
   background-size: 280%;
   background-position: center;
-  left: 50%;
-  margin-left: -35px;
-  display: none; }
+  margin-left: 180px;
+  margin-top: -40px;
+  border-radius: 100%; }
 
 /*spiner*/

@@ -38,6 +38,7 @@
 .short_line {width: 600px;}
 .review_holder {width: 700px;}
 /* reviews */
+.review_spinner{margin-top: -35px; border-radius: 100%;}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -72,6 +73,9 @@
 /* error message */
 .error_message {height: 60px;width: 240px;}
 /* error message */
+/*reviews spinner*/
+.review_spinner{margin-left: 40px;margin-top: -40px;}
+/*reviews spinner*/
 
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
@@ -105,6 +109,9 @@
 /* error message */
 .error_message {height: 60px;width: 240px;}
 /* error message */
+/*reviews spinner*/
+.review_spinner{margin-left: 40px;margin-top: 10px;}
+/*reviews spinner*/
 }
 
 @media only screen and (max-width: 319px) {
@@ -138,5 +145,8 @@
 /* error message */
 .error_message {height: 60px;width: 240px;}
 /* error message */
+/*reviews spinner*/
+.review_spinner{margin-left: 40px;margin-top: 10px;}
+/*reviews spinner*/
 }
 

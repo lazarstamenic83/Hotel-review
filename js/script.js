@@ -5,13 +5,9 @@ var nextR = true;
 			
 if(nextR){
 
-		$(document).ajaxStart(function() {
-				$(".loading_spinner").show();
-			});
-	
-
         e.preventDefault();
         $.ajax({
+        	beforeSend: function(){$(".loading_spinner").show();},
             url: "https://prodynafakeapi.herokuapp.com/api/hotels?count=5",
             type: 'GET',
             dataTypes: 'json',
@@ -27,7 +23,7 @@ if(nextR){
 					    '"></i><i class="fa fa-star" id="fifth ' +index+'"></i></div><div class="hotel_name"><h1>' + hotel.name +
 					     '</h1><p>' + hotel.city +'</p><p>' + hotel.country + '</p><div class="descript_wrapper"><p>' + hotel.description + 
 					     '</p></div></div><div class="show_reviews" id="show_reviews'+index+
-					     '"><p>Show reviews</p></div><div class="price_date"><h1>' + 
+					     '"><p>Show reviews</p></div><div class="review_spinner" id="review_spinner'+index+'"></div><div class="price_date"><h1>' + 
 					     hotel.price + ' &#8364 </h1><p>' + hotel.date_start.substring(0, 10) +
 					      '</p><p> - </p><p>' + hotel.date_end.substring(0, 10) +
 					      '</p></div></div>'+
@@ -72,10 +68,11 @@ if(nextR){
 							if(stop_loading){
 									p.preventDefault();
 								        	$.ajax({
+								        		beforeSend: function(){$("#review_spinner"+ index).show();},
             									url: "https://prodynafakeapi.herokuapp.com/api/reviews?hotel_id="+hotel.id,
             									type: 'GET',
            										dataTypes: 'json',
-           										complete: function(){$(".loading_spinner").hide();},
+           										complete: function(){$(".loading_spinner, .review_spinner").hide();},
             									success: function (data1) {
             										console.log(data1);
             										$(data1).each(function (index1, review) {
